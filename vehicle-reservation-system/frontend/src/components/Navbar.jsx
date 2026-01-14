@@ -12,10 +12,7 @@ export default function Navbar() {
       <div className="container navbar-container">
         <Link to="/" className="logo-modern">
           <div className="logo-icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M5 17H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1" />
-              <polygon points="12 15 17 21 7 21 12 15" />
-            </svg>
+            <img src="/favicon.png" alt="CeylonExplorer Logo" style={{ width: '32px', height: '32px', objectFit: 'contain' }} />
           </div>
           <span className="logo-text">
             <span className="logo-main">Ceylon</span>

@@ -13,11 +13,14 @@ service cloud.firestore {
     }
 
     // Bookings:
-    // - Create: Public if status is pending
-    // - Read/Update/Delete: Admin only
+    // - TEMPORARY DEBUGGING: Allow public read/write
     match /bookings/{bookingId} {
-      allow create: if request.resource.data.status == 'PENDING';
-      allow read, update, delete: if true;
+      allow read, write: if true;
+    }
+
+    // Diagnostics (for Test Button):
+    match /diagnostics/{docId} {
+      allow read, write: if true;
     }
 
     // Admins:

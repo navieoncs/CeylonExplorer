@@ -233,11 +233,16 @@ export const fetchBookingsByStatus = async (status) => {
   try {
     const q = query(
       collection(db, "bookings"),
-      where("status", "==", status),
-      orderBy("createdAt", "desc")
+      where("status", "==", status)
     );
     const querySnapshot = await getDocs(q);
-    return querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+    const bookings = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+    // Client-side sort to avoid needing a composite index
+    return bookings.sort((a, b) => {
+      const dateA = a.createdAt?.toDate ? a.createdAt.toDate() : new Date(a.createdAt);
+      const dateB = b.createdAt?.toDate ? b.createdAt.toDate() : new Date(b.createdAt);
+      return dateB - dateA; // Descending
+    });
   } catch (error) {
     console.error("Error fetching bookings by status (using persistent fallback):", error);
     // Fallback: Filter persistent array

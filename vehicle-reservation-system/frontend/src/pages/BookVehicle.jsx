@@ -204,13 +204,13 @@ Dropoff: ${formData.dropoffDate}
           <p>Thank you for choosing CeylonExplorer. Redirecting you to WhatsApp...</p>
           <div className="success-message">
             <p>If WhatsApp does not open in a few seconds, please click the button below.</p>
-            <p>A confirmation email will be sent to <strong>{formData.email}</strong> once processed.</p>
+            <p>Our team will contact you shortly to confirm the process.</p>
           </div>
           <div className="success-actions">
-            <button onClick={() => navigate('/')} className="btn-secondary">
+            <button onClick={() => navigate('/')} className="btn-primary" style={{ minWidth: '150px', justifyContent: 'center', backgroundColor: '#95a5a6' }}>
               Back to Home
             </button>
-            <button onClick={() => navigate('/fleet')} className="btn-secondary">
+            <button onClick={() => navigate('/fleet')} className="btn-primary" style={{ minWidth: '150px', justifyContent: 'center', backgroundColor: '#2C3E50' }}>
               View Our Fleet
             </button>
             {whatsappUrl && (
@@ -407,7 +407,7 @@ Dropoff: ${formData.dropoffDate}
                       </svg>
                       Phone Number
                     </label>
-                    <input type="tel" id="phone" name="phone" placeholder="+94 77 123 4567" required value={formData.phone} onChange={handleChange} />
+                    <input type="tel" id="phone" name="phone" placeholder="+94 76 743 9588" required value={formData.phone} onChange={handleChange} />
                   </div>
                 </div>
 
@@ -490,11 +490,11 @@ Dropoff: ${formData.dropoffDate}
               <h3>Need Help?</h3>
               <p>Our team is here to assist you with your booking.</p>
               <div className="contact-info">
-                <a href="tel:+94771234567">
+                <a href="tel:+94767439588">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
                   </svg>
-                  +94 77 123 4567
+                  +94 76 743 9588
                 </a>
                 <a href="mailto:info@ceylonexplorer.lk">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">

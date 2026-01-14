@@ -45,6 +45,8 @@ export default function AdminDashboard() {
     navigate('/admin/login');
   };
 
+
+
   const handleApprove = async (booking) => {
     // Non-blocking interaction
     setProcessingId(booking.id);
@@ -158,12 +160,7 @@ export default function AdminDashboard() {
         <div className="dashboard-header-modern">
           <div className="dashboard-title">
             <div className="dashboard-icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <rect x="3" y="3" width="7" height="7"></rect>
-                <rect x="14" y="3" width="7" height="7"></rect>
-                <rect x="14" y="14" width="7" height="7"></rect>
-                <rect x="3" y="14" width="7" height="7"></rect>
-              </svg>
+              <img src="/favicon.png" alt="Admin Dashboard Logo" style={{ width: '32px', height: '32px', objectFit: 'contain' }} />
             </div>
             <div>
               <h1>Admin Dashboard</h1>
@@ -177,6 +174,8 @@ export default function AdminDashboard() {
             Logout
           </button>
         </div>
+
+
 
         <div className="dashboard-stats">
           <div className="stat-card">
